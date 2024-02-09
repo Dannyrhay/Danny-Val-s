@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;  
+            background-color: #ffc0c0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='red' width='30px' height='30px'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M12 21.35l-1.45-1.32C6.47 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C15.09 3.81 16.76 3 18.5 3 21.58 3 24 5.42 24 8.5c0 3.78-4.47 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+        }
+
+        .envelope {
+            position: relative;
+            background-color: #fffbfb;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            /* Adding heart emojis to the background */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='red' width='50px' height='50px'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M12 21.35l-1.45-1.32C6.47 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C15.09 3.81 16.76 3 18.5 3 21.58 3 24 5.42 24 8.5c0 3.78-4.47 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+        }
+
+        .card {
+            background-color: #c1c1c1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .envelope:hover .card {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        p {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            color: #ff1212;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        footer {
+            background-color: rgba(255, 0, 0, 0.7);
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+
+        footer a:hover {
+            background-color: white;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="envelope">
+        <div class="card">
+            <p>Happy Valentine's Day, my love! Your presence in my life is like a beautiful melody,
+                filling each day with joy and warmth. I'm grateful for the love we share and the moments we create together. 
+                Here's to many more adventures and memories. <br> I love you always! <br>
+            </p>
+        </div>
+    </div>
+
+    <footer><a href="grid.html">FOREVER AND ALWAYS!</a></footer>
+</body>
+</html>

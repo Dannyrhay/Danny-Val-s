@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 219, 219);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 3em;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+        }
+
+        .filter {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 1em;
+            justify-content: center; /* Center the filter buttons */
+        }
+
+        .filter-btn {
+            background-color: #635d5d;
+            color: rgb(255, 195, 186);
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            background-color: #ef4747;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Increased gap between images */
+            justify-content: center; /* Center the images */
+        }
+
+        .image {
+            width: 225px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+            display: block;
+            border-radius: 5px;
+            object-fit: cover;
+            margin: 10px;
+        }
+
+        .heart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .heart-emoji {
+            font-size: 30px;
+            color: #d62828;
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        footer {
+            background-color: #d62828;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            background-color: #ff4141;
+            transition: background-color 0.3s ease;
+        }
+
+        footer a:hover {
+            background-color: #ff7d7d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heart-container">
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">❤️</div>
+    </div>
+
+    <h1>I <span style="color: #d62828;">Love</span> You</h1>
+
+    <div class="heart-container">
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">❤️</div>
+    </div>
+
+    <div class="filter">
+        <button class="filter-btn" data-filter="all">Memories</button>
+    </div>
+
+    <div class="image-container">
+        <div class="image-Us">
+            <img src="images/cfe394f5-2621-4c17-a423-88fd6921dbd3.jpg" alt="">
+            <img src="images/2022-07-21 18.33.34.jpg" alt="">
+            <img src="images/2022-07-22 21.07.31.jpg" alt="">
+            <img src="images/2022-07-22 22.51.52_1.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/f5819d9b-a7d7-4687-a95a-c3275a2fbf49.jpg" alt="">
+            <img src="images/a6805c30-0f3b-4002-9606-69876344adee.jpg" alt="">
+            <img src="images/441c5a6b-0bbf-48ba-9876-90a193a1faf3.jpg" alt="">
+            <img src="images/84b150da-36c8-4bc1-95fc-7a88bba2db5e.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/2022-09-25 23.13.01.jpg" alt="">
+            <img src="images/2023-05-02 21.29.33.jpg" alt="">
+            <img src="images/2023-08-31 13.55.23.jpg" alt="">
+            <img src="images/2023-09-01 17.00.30.jpg" alt="">
+        </div>
+    </div>
+
+    <footer>
+        <a href="index.html">VAL'S DAY</a>
+    </footer>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const imageContainer = document.querySelector('.image-container');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', filterImages);
+            });
+
+            function filterImages(e) {
+                const category = e.target.getAttribute('data-filter');
+                const images = document.querySelectorAll('.image');
+
+                images.forEach(image => {
+                    image.style.display = 'none';
+
+                    if (category === 'all' || image.classList.contains(category)) {
+                        image.style.display = 'block';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
